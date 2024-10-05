@@ -8,7 +8,7 @@
 }
 @font-face {
   font-family: "mono";
-  src: url("../fonts/FiraMono-Regular.ttf");
+  src: url("../fonts/IBMPlexMono-Light.otf");
 }
 :root {
   --text-color: white;
