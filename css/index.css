@@ -15,10 +15,11 @@
   --gray3: #4d4d4d;
   --gray2: #333333;
   --gray1: #262626;
+  --border-radius: clamp(10px, 1.5vw, 200px);
+  --border: transparent;
   --h1-font: 4.5rem;
   --h2-font: 2.9rem;
   --p-font: 1rem;
-  --border: transparent;
 }
 
 * {
@@ -26,14 +27,23 @@
   padding: 0;
   margin: 0;
   font-family: "Light";
-  background: var(--gray1);
-  color: var(--text-color);
   text-align: center;
+  background: var(--gray2);
+  color: var(--text-color);
+}
+
+#calculator__container {
+  font-family: "Light";
+  background: var(--gray1);
 }
 
 #keys {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
+  gap: clamp(5px, 1vw, 16px);
+  padding: clamp(5px, 1vw, 16px);
+  background-color: var(--gray1);
+  border-radius: var(--border-radius);
 }
 
 button {
