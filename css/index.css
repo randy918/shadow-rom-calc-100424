@@ -7,12 +7,14 @@
   src: url("../fonts/FiraSans-Light.ttf");
 }
 :root {
-  --text-color: black;
+  --text-color: white;
   --background-color: red;
   --background-color2: #22282;
   --main-color: #13bbff;
   --main-color2: #c3cad5;
-  --theGray: #888888;
+  --gray3: #4d4d4d;
+  --gray2: #333333;
+  --gray1: #262626;
   --h1-font: 4.5rem;
   --h2-font: 2.9rem;
   --p-font: 1rem;
@@ -20,18 +22,27 @@
 }
 
 * {
+  box-sizing: border-box;
   padding: 0;
   margin: 0;
   font-family: "Light";
-  background: var(--background-color);
+  background: var(--gray1);
   color: var(--text-color);
   text-align: center;
 }
 
-#calculator__container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  background-color: #f0f0f0;
+#keys {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+}
+
+button {
+  width: clamp(30px, 6vw, 100px);
+  height: clamp(30px, 6vw, 100px);
+  border-radius: 50%;
+  border: none;
+  background-color: var(--gray3);
+  color: white;
+  font-size: clamp(20px, 4vw, 60px);
+  cursor: pointer;
 }/*# sourceMappingURL=index.css.map */
