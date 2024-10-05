@@ -1,86 +1,163 @@
 //>  ████████████████████████████████████  FONTS
 
 @font-face {
-  font-family: "Bold";
-  src: url("../fonts/FiraSans-Black.ttf");
+    font-family: "bold";
+    src: url("../fonts/FiraSans-Black.ttf");
 }
 
 @font-face {
-  font-family: "Light";
-  src: url("../fonts/FiraSans-Light.ttf");
+    font-family: "light";
+    src: url("../fonts/FiraSans-Light.ttf");
+}
+
+@font-face {
+    font-family: "mono";
+    src: url("../fonts/FiraMono-Regular.ttf");
 }
 
 //>  ████████████████████████████████████  VARIABLES
 
 :root {
-  --text-color: white;
-  --background-color: red;
-  --background-color2: #22282;
-  --main-color: #13bbff;
-  --main-color2: #c3cad5;
-  --gray3: #4d4d4d;
-  --gray2: #333333;
-  --gray1: #262626;
+    --text-color: white;
+    --background-color: red;
+    --background-color2: #22282;
+    --main-color: #13bbff;
+    --main-color2: #c3cad5;
+    --gray3: #4d4d4d;
+    --gray2: #333333;
+    --gray1: #262626;
 
---border-radius: clamp(10px, 1.5vw, 200px);
---border: transparent;
+    --border-radius: clamp(10px, 1.5vw, 200px);
+    --border: transparent;
 
-  --h1-font: 4.5rem;
-  --h2-font: 2.9rem;
-  --p-font: 1rem;
+    --h1-font: 4.5rem;
+    --h2-font: 2.9rem;
+    --p-font: 1rem;
 
 }
 
-
 //>  ████████████████████████████████████  RESET
 * {
-  box-sizing: border-box;
+    box-sizing: border-box;
 
-  padding: 0;
-  margin: 0;
+    padding: 0;
+    margin: 0;
 
-  font-family: "Light";
-  text-align: center;
-  
-  background: var(--gray2);;
-  color: var(--text-color);
+    font-family: "light";
+    text-align: center;
+
+    background: var(--gray2);
+    ;
+    color: var(--text-color);
+}
+
+body {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 //>  ████████████████████████████████████  CALCULATOR
 
 #calculator__container {
+    font-family: 'light';
+    background: var(--gray1);
 
-font-family: 'Light';
-background: var(--gray1);;
+    width: 100vw;
+    color: white;
+
+    overflow: hidden;
+}
+
+//>  ████████████████████████████████████  DISPLAY
+#calculator__display {
+
+    width: 100%;
+    padding: 2vw;
+    font-family: "mono";
+    
+    font-size: clamp(10px, 8vw, 200px);
+    border: none;
+    text-align: right;
+    padding-right: clamp(10px, 4vw, 42px);
 
 
 }
+
 
 //>  ████████████████████████████████████  KEYS
 
-#keys {
+#calculator__keys {
 
-display: grid;
-grid-template-columns: repeat(5, 1fr);
-gap: clamp(5px, 1vw, 16px);
-padding: clamp(5px, 1vw, 16px);
-background-color: var(--gray1);
-border-radius: var(--border-radius);
+    display: grid;
+    grid-template-columns: repeat(5, 18vw);
+    gap: clamp(5px, 1vw, 16px);
+    padding: clamp(5px, 1vw, 16px);
+    background-color: var(--gray1);
+    border-radius: var(--border-radius);
+    width: 100vw;
+    padding-left: 2vw;
+    padding-right: 2vw;
 }
 
-//>  ████████████████████████████████████  BUTTON
+//>  ████████████████████████████████████  BUTTONS
 
 button {
 
-width: clamp(30px, 6vw, 100px);
-height: clamp(30px, 6vw, 100px);
-border-radius: 50%;
-border: none;
-background-color: var(--gray3);
-color: white;
+    width: 100%;
+    height: 17.5vw;
+    border-radius: 50%;
+    border: none;
+    background-color: var(--gray3);
+    color: white;
 
-font-size: clamp(20px, 4vw, 60px);
+    font-size: clamp(40px, 12vw, 120px);
 
-cursor: pointer;
+    transition: all .50s ease;
+
+    cursor: pointer;
+
+    &:hover {
+        background-color: hsl(0, 0%, 40%);
+    }
+
+    &:active {
+        background-color: hsl(0, 0%, 60%);
+    }
+
+}
+
+.operator-btn {
+
+    background-color: hsl(35, 100%, 55%);
+
+
+}
+
+.operator-btn span {
+
+    background-color: transparent;
+    position: relative;
+    top: 2.5vw;
+
+}
+
+.operator-btn:hover {
+
+    background-color: hsl(35, 100%, 65%);
+
+}
+
+.operator-btn:active {
+
+    background-color: hsl(35, 100%, 85%);
+
+}
+
+.new-btn {
+
+    background-color: #00DBA0;
+
 
 }
