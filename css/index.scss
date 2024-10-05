@@ -1,0 +1,54 @@
+//>  ████████████████████████████████████  FONTS
+
+@font-face { 
+    font-family: "Bold"; 
+    src: url("../fonts/FiraSans-Black.ttf"); 
+  }
+@font-face { 
+    font-family: "Light"; 
+    src: url("../fonts/FiraSans-Light.ttf"); 
+  }
+
+//>  ████████████████████████████████████  VARIABLES
+
+:root {
+  --text-color: black;
+  --background-color: red;
+  --background-color2: #22282;
+  --main-color: #13bbff;
+  --main-color2: #c3cad5;
+  --theGray: #888888;
+
+  --h1-font: 4.5rem;
+  --h2-font: 2.9rem;
+  --p-font: 1rem;
+
+  --border: transparent;
+}
+
+
+//>  ████████████████████████████████████  RESET
+* {
+    // display: inline-block;
+    
+    padding: 0;
+    margin: 0;
+    
+    font-family: "Light"; 
+    background: var(--background-color);;
+    color: var(--text-color);;
+   
+    text-align: center;
+   
+
+}
+
+#calculator__container {
+
+display: flex;
+justify-content: center;
+align-items: center;
+height: 100vh;
+background-color: #f0f0f0;
+
+}
